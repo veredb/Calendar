@@ -54,19 +54,19 @@ def test_12_number_of_days_in_a_regular_month
 end
 
   def test_13_prints_the_right_month_in_the_title
-     assert_equal("\t\tMarch 2000\n", print_month_year(3,2000))
+     assert_equal("\t\tMarch 2000\n", month_year_title(3,2000))
   end
 
   def test_14_prints_the_right_month_in_the_title
-     assert_equal("\t\tJanuary 1971\n", print_month_year(1, 1971))
+     assert_equal("\t\tJanuary 1971\n", month_year_title(1, 1971))
   end
 
   def test_15_prints_the_right_month_in_the_title
-     assert_equal("\t\tJune 2080\n", print_month_year(6, 2080))
+     assert_equal("\t\tJune 2080\n", month_year_title(6, 2080))
   end
 
   def test_16_prints_the_line_of_days_Su_Mo_Tu
-     assert_equal("Su\tMo\tTu\tWe\tTh\tFr\tSa\t", print_days_of_week_in_line)
+     assert_equal("Su\tMo\tTu\tWe\tTh\tFr\tSa\t", days_of_week_in_line)
   end
 
 end
