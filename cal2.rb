@@ -1,4 +1,5 @@
-def day_of_week_of_start(m, y)       # Zellers congruence
+def day_of_week_of_start(m, y)       # Zellers congruence  -- an algorithm to find the day in which the month starts  
+                                     # see --  en.wikipedia.org/wiki/Zeller's_congruence
   if m == 1 || m == 2 
     m = m + 12
     y = y - 1
@@ -58,7 +59,7 @@ def the_days(m, y)            # This function returns the starting day of week a
      str += "\t"
   end
   feb_in_leap_year = 0
-  if (m == 2 && y%4 == 0 && y%100 == 0 && y%400 == 0)      #checks for leap year
+  if (m == 2 && y%4 == 0 && y%100 == 0 && y%400 == 0)      #checks for leap year  -- check  www.timeanddate.com/date/leapyear.html
     feb_in_leap_year = 1
   end
   for days in 1..(day_in_month[m] + feb_in_leap_year) do
@@ -72,7 +73,7 @@ def the_days(m, y)            # This function returns the starting day of week a
   str
 end
 
-def print_calendar(m, y)
+	def print_calendar(m, y)                    # This function does the printing for all the small functions of the calendar
    day_of_week_of_start(m, y)
    print month_year_title(m, y)
    print days_of_week_in_line
