@@ -14,7 +14,7 @@ end
 
   
   
-def print_month_year(m, y)          # This function returns the title of month and year
+def month_year_title(m, y)          # This function returns the title of month and year
   str = ""
   months = {1=>"January", 2=>"February", 3=>"March", 4=>"April", 5=>"May", 6=>"June", 7=>"July", 8=>"August", 9=>"September", 10=>"October", 11=>"November", 12=>"December"}
   months.each do |num,mon|     
@@ -27,7 +27,7 @@ def print_month_year(m, y)          # This function returns the title of month a
 end
 
 
-def print_days_of_week_in_line             # This function returns the line of the days Su Mo Tu.....
+def days_of_week_in_line             # This function returns the line of the days Su Mo Tu.....
   str = ""
   days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
   days.each do |a|     
@@ -36,7 +36,7 @@ def print_days_of_week_in_line             # This function returns the line of t
   str
 end
   
-def print_empty_line    # This function returns an empty line under Su Mo Tu.....
+def empty_line    # This function returns an empty line under Su Mo Tu.....
   str = ""
   for x in 1..7 do     
     if x % 7 == 0
@@ -71,3 +71,11 @@ def the_days(m, y)            # This function returns the starting day of week a
   str += "\n"
   str
 end
+
+def print_calendar(m, y)
+   day_of_week_of_start(m, y)
+   print month_year_title(m, y)
+   print days_of_week_in_line
+   print empty_line
+   print the_days(m, y)
+end 
