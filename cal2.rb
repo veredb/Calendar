@@ -73,10 +73,17 @@ def the_days(m, y)            # This function returns the starting day of week a
   str
 end
 
-	def print_calendar(m, y)                    # This function does the printing for all the small functions of the calendar
+def print_calendar(m, y)                    # This function does the printing for all the small functions of the calendar
    day_of_week_of_start(m, y)
    print month_year_title(m, y)
    print days_of_week_in_line
    print empty_line
    print the_days(m, y)
 end 
+
+m = ARGV[0].to_i
+y = ARGV[1].to_i
+
+print_calendar(m, y)
+
+
