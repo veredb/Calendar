@@ -103,4 +103,6 @@ def print_year(y)                       #This function prints all the functions 
  end
 end
 
+y = ARGV[0].to_i
 
+print_year(y)
